@@ -7,7 +7,7 @@ import EC from 'elliptic';
 })
 export class BlockchainService {
   public blockchainInstance = new Blockchain();
-  public walletKeys: Array<IWalletKey> = [];
+  public walletKeys= [];
 
   constructor() {
     this.blockchainInstance.difficulty = 1;

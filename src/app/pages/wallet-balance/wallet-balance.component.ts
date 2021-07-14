@@ -16,6 +16,7 @@ export class WalletBalanceComponent implements OnInit {
 
   ngOnInit() {
     this.route.params.subscribe( (params) => {
+        console.log(params);//checking the key of params here address
         this.walletAddress = params['address'];
 
         const blockchain = this.blockchainService.blockchainInstance;

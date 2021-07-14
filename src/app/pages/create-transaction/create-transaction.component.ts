@@ -23,8 +23,6 @@ export class CreateTransactionComponent implements OnInit {
 
   createTransaction() {
     const newTx = this.newTx;
-
-    // Set the FROM address and sign the transaction
     newTx.fromAddress = this.ownWalletKey.publicKey;
     newTx.signTransaction(this.ownWalletKey.keyObj);
 
@@ -35,7 +33,7 @@ export class CreateTransactionComponent implements OnInit {
       return;
     }
 
-    this.router.navigate(['/new/transaction/pending', { addedTx: true }]);
+    this.router.navigate(['/new/transaction/pending']);
     this.newTx = new Transaction();
   }
 }
